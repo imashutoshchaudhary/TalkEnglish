@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityMain"
+    android:orientation="vertical"
+    android:backgroundTint="#EAF0F1">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+              <ImageView
+                  android:id="@+id/gifImage"
+                  android:layout_marginTop="50dp"
+                  android:layout_width="200dp"
+                  android:layout_height="200dp"
+                  android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/callState"
+                    android:layout_below="@id/gifImage"
+                    android:textSize="17sp"
+                    android:text="Call State"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center_horizontal"
+                   android:layout_marginBottom="30dp"/>
+
+               <Chronometer
+                   android:id="@+id/timer"
+                   android:layout_below="@id/callState"
+                   android:layout_width="wrap_content"
+                   android:layout_centerHorizontal="true"
+                   android:layout_height="wrap_content"
+                   android:textSize="20sp" />
+
+       </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.facebook.ads.NativeAdLayout
+        android:id="@+id/native_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <Button
+        android:id="@+id/endCall"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:text="Disconnect Call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent">
+
+              <LinearLayout
+                  android:layout_alignParentBottom="true"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:weightSum="3"
+                  android:layout_gravity="bottom">
+
+                    <EditText
+                        android:id="@+id/mainStatus"
+                        android:text="active"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                  <EditText
+                      android:id="@+id/mainStatus2"
+                      android:text="inactive"
+                      android:visibility="gone"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent" />
+
+                     <Button
+                         android:id="@+id/shareButton"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:text="SHARE"
+                         android:textSize="17sp"
+                         android:textStyle="bold"
+                         android:backgroundTint="@android:color/white"/>
+
+                          <Button
+                              android:id="@+id/privacyPolicy"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:text="Privacy"
+                              android:textSize="17sp"
+                              android:textStyle="bold"
+                              android:backgroundTint="@android:color/white"/>
+
+                          <Button
+                              android:id="@+id/moreApps"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:text="More Apps"
+                              android:textSize="17sp"
+                              android:textStyle="bold"
+                              android:backgroundTint="@android:color/white"/>
+
+              </LinearLayout>
+
+       </RelativeLayout>
+</LinearLayout>

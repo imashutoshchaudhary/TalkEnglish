@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "408490176668",
+    "firebase_url": "https://talk-english-83eda.firebaseio.com",
+    "project_id": "talk-english-83eda",
+    "storage_bucket": "talk-english-83eda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408490176668:android:3f9c4f126067d86c",
+        "android_client_info": {
+          "package_name": "com.talkenglish.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408490176668-jglklgseoehuipb1jcki0fvl2giogi7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talkenglish.myapplication",
+            "certificate_hash": "29c7f1abc993b546eb224e089999db5c56aa8eb2"
+          }
+        },
+        {
+          "client_id": "408490176668-q1frlnhdkdp1sfn9e32tiafuq3d5uoq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk_PM4PZrw6wiEN-5h7OrqxLSavmG_c1Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408490176668-q1frlnhdkdp1sfn9e32tiafuq3d5uoq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

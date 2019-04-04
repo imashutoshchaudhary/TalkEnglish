@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserName"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editName"
+        android:hint="Enter Your Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"/>
+
+    <EditText
+        android:id="@+id/status"
+        android:text="inactive"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"/>
+
+    <Button
+        android:id="@+id/editNameBtn"
+        android:text="Continue"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
