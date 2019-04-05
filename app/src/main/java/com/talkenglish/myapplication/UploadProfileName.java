@@ -1,7 +1,7 @@
 package com.talkenglish.myapplication;
 
 public class UploadProfileName {
-    private String mName, mStatus, mUserId;
+    public String mName, mStatus, mUserId;
     private String mImageUrl;
 
     public UploadProfileName(){
@@ -13,6 +13,16 @@ public class UploadProfileName {
         this.mName = mName;
         this.mStatus = mStatus;
         this.mImageUrl = mImageUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "UploadProfileName{" +
+                "mName='" + mName + '\'' +
+                ", mStatus='" + mStatus + '\'' +
+                ", mUserId='" + mUserId + '\'' +
+                ", mImageUrl='" + mImageUrl + '\'' +
+                '}';
     }
 
     public String getmName() {

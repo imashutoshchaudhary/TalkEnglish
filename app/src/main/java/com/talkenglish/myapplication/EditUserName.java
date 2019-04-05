@@ -43,7 +43,7 @@ public class EditUserName extends AppCompatActivity {
     FirebaseAuth mAuth;
     private Uri mImageUri;
     private StorageReference mStorageRef;
-    private DatabaseReference mDatabaseRef;
+    private DatabaseReference mDatabaseRef,mDatabaseRef1;
     StorageTask mUploadTask;
     ProgressDialog pd;
     String currentVersion, latestVersion;
@@ -56,11 +56,12 @@ public class EditUserName extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_user_name);
 
-        getCurrentVersion();
+        //getCurrentVersion();
         FirebaseApp.initializeApp(this);
 
         mStorageRef = FirebaseStorage.getInstance().getReference("UserProfileName");
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("UserProfileName");
+        mDatabaseRef1 = FirebaseDatabase.getInstance().getReference("UserStatus");
         pd = new ProgressDialog(this);
 
         mImageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
@@ -204,6 +205,6 @@ public class EditUserName extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        getCurrentVersion();
+        //getCurrentVersion();
     }
 }

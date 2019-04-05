@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -133,6 +135,7 @@ public class MainActivityMain extends AppCompatActivity {
         mStorageRef = FirebaseStorage.getInstance().getReference("UserProfileName");
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("UserProfileName");
         mDatabaseRef1 = FirebaseDatabase.getInstance().getReference("UserStatus");
+
         pd = new ProgressDialog(this);
 
         mDatabaseRef1.addValueEventListener(new ValueEventListener() {
@@ -214,20 +217,18 @@ public class MainActivityMain extends AppCompatActivity {
     }
 
     public void gettingOtherUserId() {
+        Toast.makeText(this, "Getting Other Users", Toast.LENGTH_SHORT).show();
+
+        final DatabaseReference login=mDatabaseRef1.child(uid);
         mDatabaseRef1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
-                    UploadProfileName uploadProfileName = childDataSnapshot.getValue(UploadProfileName.class);
-                    listData.add(uploadProfileName);
-                    otherUserID = uploadProfileName.getmUserId();
 
-                    if (otherUserID==""){
-                        Toast.makeText(MainActivityMain.this, "No Users Available", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(MainActivityMain.this, ""+otherUserID, Toast.LENGTH_SHORT).show();
-                    }
-                }
+                    UploadProfileName uploadProfileName = dataSnapshot.getValue(UploadProfileName.class);
+                    Toast.makeText(getApplicationContext(),uploadProfileName.toString(),Toast.LENGTH_LONG).show();
+
+
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {

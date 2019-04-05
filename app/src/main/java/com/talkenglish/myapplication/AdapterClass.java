@@ -11,9 +11,11 @@ import java.util.List;
 
 public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ViewHolder>{
 private List<UploadProfileName>listData;
+private int selectedItem;
 
 public AdapterClass(List<UploadProfileName> listData) {
         this.listData = listData;
+        selectedItem = 0;
         }
 
 @NonNull
